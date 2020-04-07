@@ -143,7 +143,7 @@ def make_a_queue(apps, node_nb, min_time, debug=False):
 		app = randint(0,len(apps)-1)
 		queue.append(apps[app])
 		if debug:
-			print("adding a job for application "+str(apps[app])+", now our optimistic execution time is "+str(calculate_makespan(queue, node_nb, "best")))
+			print("adding a job for application "+str(apps[app])+", now our optimistic execution time is "+str(calculate_makespan(queue, node_nb, "best", debug)))
 	return queue
 	
 #see play_execution

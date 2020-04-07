@@ -6,7 +6,7 @@ from output_file import OutputFile
 ####### PARAMETERS #####
 input_file = "results-runtime.csv"  #with the path so we can find it
 output_file = "random_queues.csv"   
-debug = False 
+debug = True 
 node_nb = 96  #how many processing nodes
 ion_nb = 8    #how many I/O nodes
 minimum_time = 3600  #minimum experiment execution time in seconds
@@ -14,7 +14,7 @@ summary_method = "median"  #how should we combine multiple executions
 			#of the same applications with the same 
 			#configuration to obtain an estimate for its 
 			#execution time ("mean" or "median")
-queue_nb = 10 #number of random queues to be generated and evaluated
+queue_nb = 1 #number of random queues to be generated and evaluated
 ########################
 
 #reads information from the file and returns a list of Application
@@ -66,6 +66,10 @@ seed()
 random_queues = []
 while len(random_queues) < queue_nb:
 	new_queue = Queue(apps, node_nb, minimum_time, debug)
+	#here we can add filters to discard queues that are not what
+	#we want
+	if new_queue.median_input_njobs < 2:
+		continue
 	q = new_queue.encode()  #to understand how a queue of jobs is
 			#represented by a single string, see the
 			#application_encode.py file
