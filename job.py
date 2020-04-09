@@ -38,6 +38,11 @@ class Job:
 		update_progress to
 		account for the time spent with the previous 
 		configuration (so it requires the clock of this event)
+	estimate_end_time():
+		Giving the pace defined by the current number of I/O 
+		nodes (see update_progress for an explanation), return
+		the clock of the moment when this job is 
+		expected to finish its execution.
 	"""
 	def __init__(self, jobid, start_time, app, ion=-1):
 		self.jobid = jobid

@@ -1,4 +1,5 @@
 from job import Job
+from metrics import Metrics
 
 #this is similar to play_execution from queue.py in the sense that we 
 #try to play what will happen during the execution to collect metrics.
@@ -6,7 +7,8 @@ from job import Job
 #given to each job and try to estimate I/O bandwidth.
 #we will play the execution of a exp_queue of jobs on a cluster of node_nb
 #processing nodes and ion_nb I/O nodes
-def simulate_execution_with_policy(exp_queue, node_nb, ion_nb):
+#returns a Metrics object with all the calculated metrics
+def simulate_execution_with_policy(exp_queue, node_nb, ion_nb, policy):
 	clock = 0
 	#makes a hard copy of exp_queue (below), otherwise python would
 	#copy the reference to the list, and it would be modified in
@@ -15,6 +17,7 @@ def simulate_execution_with_policy(exp_queue, node_nb, ion_nb):
 	available_nodes = node_nb
 	running = [] #it will keep the jobs while they are running
 	jobid = 0
+	metrics = Metrics()
 	while(len(queue) > 0) or (len(running) > 0): #while there are 
 					#applications either waiting or
 					#still running
@@ -27,8 +30,9 @@ def simulate_execution_with_policy(exp_queue, node_nb, ion_nb):
 		#now we know the set of jobs that will run concurrently
 		#until the next event, so we have to decide the number 
 		#of I/O nodes to each of them
-		decisions = apply_policy(running) #TODO
-		#TODO call update_io_nodes to each of the jobs in running
+		decisions = apply_policy(running, node_nb, ion_nb, policy, metrics, clock) 
+		for job in running:
+			job.update_io_nodes(decisions[job], clock)
 		#now they will run until the first one ends its 
 		#execution, so we go to that moment
 		done,clock = get_next_finishing_jobs(running)
@@ -41,8 +45,8 @@ def simulate_execution_with_policy(exp_queue, node_nb, ion_nb):
 		#jobs, we will still do the new decisions because the 
 		#set of running application has still changed (because 
 		#some of them just finished)
-	return clock
-	#TODO return metrics
+	metrics.makespan = clock
+	return metrics
 
 #gets a list of jobs, estimate all their ending times, returns a list
 #of the next ones to end (we could have multiple jobs ending at the 

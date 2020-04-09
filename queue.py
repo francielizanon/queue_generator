@@ -3,6 +3,8 @@ from random import randint
 from numpy import median,mean
 from application import Application
 from application_encode import encode_application
+from policy_simulation import simulate_execution_with_policy
+from metrics import Metrics
 
 class Queue:
 	"""
@@ -22,24 +24,15 @@ class Queue:
 		an upper bound for the execution time of this queue. It
 		cannot be longer than this (but this upper bound itself
 		may be impossible to attain)
-	median_njobs and mean_njobs : float
-		the median and mean number of concurrent jobs during 
-		the execution, taken from a list of one measurement per
-		second (so considering the time)
-	median_period and mean_period : float
-		the median and mean time between consecutive calls to
-		the policy (which will decide how many I/O nodes to use
-		to each application)
-	policy_calls : int
-		number of calls to the policy
-	median_input_njobs and mean_input_njobs : float
-		median and mean number of concurrent jobs given as
-		input to the policy (similar to {median, mean}_njobs, 
-		except that metric considers the time, while this one 
-		just takes the number of concurrent jobs at each policy 
-		call)
+	baseline_metrics : Metrics
+		metrics obtained from simulating the generated queue 
+		with the baseline policy (where the connection between 
+		computing and I/O nodes is fixed
+	mckp_metrics : Metrics
+		metrics obtained from simulating the generated queue
+		with the mckp policy
 	"""
-	def __init__(self, apps, node_nb, min_time, debug):
+	def __init__(self, apps, node_nb, ion_nb, min_time, debug):
 		"""
 		Generates a random queue respecting given constraints.
 		Then calculates some metrics on this queue that will
@@ -68,17 +61,11 @@ class Queue:
 			done = are_all_applications_executed(self.jobs, apps)
 			if (not done) and debug:
 				print("Made a queue of "+str(len(self.jobs))+" jobs, but not all applications are present, so we'll try again.")
-		metrics = play_execution(self.jobs, node_nb, "best")
-		self.min_makespan = metrics[0]
-		self.median_njobs = metrics[1]
-		self.mean_njobs = metrics[2]
-		self.median_period = metrics[3]
-		self.mean_period = metrics[4]
-		self.median_input_njobs = metrics[5]
-		self.mean_input_njobs = metrics[6]
-		self.policy_calls = metrics[7]
+		self.min_makespan = calculate_makespan(self.jobs, node_nb, "best")
 		self.max_makespan = calculate_makespan(self.jobs, node_nb, "worst")
-		#TODO evaluate with policies
+		self.baseline_metrics = simulate_execution_with_policy(self.jobs, node_nb, ion_nb, "baseline")
+		#TODO baseline_mckp
+
 	
 	def encode(self):
 		"""
@@ -146,10 +133,6 @@ def make_a_queue(apps, node_nb, min_time, debug=False):
 			print("adding a job for application "+str(apps[app])+", now our optimistic execution time is "+str(calculate_makespan(queue, node_nb, "best", debug)))
 	return queue
 	
-#see play_execution
-def calculate_makespan(queue, node_nb, which_time, debug=False):
-	return play_execution(queue, node_nb, which_time, debug)[0]
-
 #play the execution of the queue with FIFO scheduler on a cluster
 #of node_nb processing nodes to see how long it
 #would take in an optimistic (which_time = "best") or pessimistic 
@@ -158,20 +141,8 @@ def calculate_makespan(queue, node_nb, which_time, debug=False):
 #of available I/O nodes, in fact the obtained makespan may be 
 #impossible for this queue. It is used just to give lower and upper 
 #bounds on the actually execution time of the experiment.
-#
-#Returns metrics on the execution: 
-#(makespan, 
-#median number of concurrent jobs, 
-#mean number of concurrent jobs, 
-#median time between possible changes, 
-#mean time between possible changes, 
-#median number of jobs that would be given as input to the policy calls
-#mean number of jobs that would be given as input to the policy calls,
-#total number of calls to the policy)
-#
-#"possible changes" here refers to when a policy will be applied to 
-#decide the number of I/O nodes for all running applications
-def play_execution(queue, node_nb, which_time,debug=False): 
+#Returns the makespan
+def calculate_makespan(queue, node_nb, which_time,debug=False): 
 	events=[] #a heap of events where we will put the end
 		#of applications so we can schedule new ones
 		#and advance in time towards the end of the
@@ -183,12 +154,6 @@ def play_execution(queue, node_nb, which_time,debug=False):
 	this_queue = [job for job in queue]  
 	available_nodes = node_nb
 	current_conc_nb = 0   #the number of concurrent jobs in execution
-	concurrent_nb = []   #to keep track of the number of concurrent 
-			#jobs during the simulation
-	time_between_events = [] #to keep track of time between possible
-			# changes in the decisions
-	input_jobnb = [] #to keeo track of the number of jobs that 
-			#would be the input for the policy
 	if debug:
 		print("Will start the \"simulation\" with "+str(node_nb)+" nodes and queue: "+str([str(app) for app in this_queue]))
 	while (len(this_queue) > 0) or (len(events) > 0): 
@@ -207,15 +172,11 @@ def play_execution(queue, node_nb, which_time,debug=False):
 		#to the moment where the next one finishes its
 		#execution
 		event = heappop(events)
-		if int(event[0]) > int(clock):
-			concurrent_nb.extend([current_conc_nb for i in range(int(clock), int(event[0]))])
-		time_between_events.append(event[0] - clock)
-		input_jobnb.append(current_conc_nb)
 		clock = event[0]
 		available_nodes += event[1].nodes
 		current_conc_nb -= 1
 		if debug:
 			print("clock = "+str(clock)+", end of "+str(event[1])+", available = "+str(available_nodes))
-	return (clock, median(concurrent_nb), mean(concurrent_nb), median(time_between_events), mean(time_between_events), median(input_jobnb), mean(input_jobnb), len(input_jobnb))
+	return clock
 				
 				
