@@ -1,5 +1,5 @@
 from numpy import median,mean
-from bandwidth import get_bandwidth
+from bandwidth import Bandwidth
 
 class Metrics:
 	"""
@@ -37,23 +37,29 @@ class Metrics:
 		changed 
 	bandwidth : List[float]
 		a list with the global bandwidth every second
-	median_bandwidth and mean_bandwidth : float
-		median and mean of bandwidth
+	median_bandwidth, mean_bandwidth, max_bandwidth : float
+		median, mean, and maximum bandwidth
 	previous_bandwidth : float
 		used so we can register the previously obtained 
 		bandwidth for how long it happened (which we will only
 		know the next time the policy is called)
+	bandwidth_getter : Bandwidth
+		a reference to the Bandwidth object used to obtain 
+		bandwidth of different combinations of application
+		and number of I/O nodes
 	
 	Methods
 	-------
-	register_policy_calls(job_nb)
+	register_policy_call(job_nb)
 		called by the policy every time it is applied to update
 		the metrics
-	summarize_policy_metrics()
+	summarize_policy_metrics(clock)
 		it MUST be called at the end of the simulation to 
-		calculate the means and medians
+		calculate the means and medians, and to set the
+		makespan to clock
 	"""
-	def __init__(self):
+	def __init__(self, bandwidth_getter):
+		self.bandwidth_getter = bandwidth_getter
 		self.policy_calls = 0
 		self.last_clock = -1.0
 		self.period = []
@@ -67,17 +73,23 @@ class Metrics:
 		self.bandwidth = []
 		self.median_bandwidth = -1.0
 		self.mean_bandwidth = -1.0
+		self.max_bandwidth = -1.0
 		self.previous_bandwidth = -1.0
 
-	def summarize_policy_metrics(self):
+	def summarize_policy_metrics(self, clock):
+		if (self.last_clock >= 0) and (clock > self.last_clock):
+			#we have to register the last bandwidth we observed
+			self.bandwidth.extend([self.previous_bandwidth for i in range(int(self.last_clock), int(clock))])
+		self.makespan = clock
 		self.median_period = median(self.period)
 		self.mean_period = mean(self.period)
 		self.median_bandwidth = median(self.bandwidth)
 		self.mean_bandwidth = mean(self.bandwidth)
+		self.max_bandwidth = max(self.bandwidth)
 		self.median_njobs = median(self.njobs)
 		self.mean_njobs = mean(self.njobs)
 		
-	def register_policy_calls(self, job_nb, clock, decision):
+	def register_policy_call(self, job_nb, clock, decision, debug=False):
 		"""
 		Parameters
 		----------
@@ -90,12 +102,16 @@ class Metrics:
 		#calculate bandwidth
 		global_band = 0.0
 		for job in decision:
-			global_band += get_bandwidth(job.app.app, job.app.nodes, job.app.procs, decision[job])
+			global_band += self.bandwidth_getter.get(job.app.app, job.app.nodes, job.app.procs, decision[job])
+		if debug:
+			print("The new global bandwidth is "+str(global_band))
 		#time between consecutive calls to the policy
 		if self.last_clock >= 0:
-			assert clock > self.last_clock
+			assert clock >= self.last_clock  
 			self.period.append(clock-self.last_clock)
-			self.bandwidth.extend([self.previous_bandwidth for i in range(clock, self.last_clock)])
+			if debug:
+				print("Registering the previous bandwidth of "+str(self.previous_bandwidth)+" from times "+str(int(self.last_clock))+" to "+str(int(clock)))
+			self.bandwidth.extend([self.previous_bandwidth for i in range(int(self.last_clock), int(clock))])
 		self.last_clock = clock
 		self.previous_bandwidth = global_band
 		#number of jobs given as input

@@ -92,7 +92,7 @@ class Job:
 		assert ion in self.app.runtime #make sure we have an
 					#execution time of this app
 					#with this number of I/O  nodes
-		update_progress(clock)
+		self.update_progress(clock)
 		self.ion = ion
 		self.previous_event = clock
 

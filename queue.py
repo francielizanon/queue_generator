@@ -32,7 +32,7 @@ class Queue:
 		metrics obtained from simulating the generated queue
 		with the mckp policy
 	"""
-	def __init__(self, apps, node_nb, ion_nb, min_time, debug):
+	def __init__(self, apps, node_nb, ion_nb, min_time, debug, bandwidth_getter):
 		"""
 		Generates a random queue respecting given constraints.
 		Then calculates some metrics on this queue that will
@@ -63,9 +63,12 @@ class Queue:
 				print("Made a queue of "+str(len(self.jobs))+" jobs, but not all applications are present, so we'll try again.")
 		self.min_makespan = calculate_makespan(self.jobs, node_nb, "best")
 		self.max_makespan = calculate_makespan(self.jobs, node_nb, "worst")
-		self.baseline_metrics = simulate_execution_with_policy(self.jobs, node_nb, ion_nb, "baseline")
-		#TODO baseline_mckp
-
+		if debug:
+			print("Will simulate it with the baseline policy")
+		self.baseline_metrics = simulate_execution_with_policy(self.jobs, node_nb, ion_nb, "baseline", bandwidth_getter)
+		if debug:
+			print("Will simulate it with the mckp policy")
+		self.mckp_metrics = simulate_execution_with_policy(self.jobs, node_nb, ion_nb, "mckp", bandwidth_getter)
 	
 	def encode(self):
 		"""
@@ -92,15 +95,22 @@ class Queue:
 		"""
 		assert encoded != ""
 		ret = encoded + ";"+str(len(self.jobs))+";"
-		ret += str(self.policy_calls)+";"
 		ret += str(self.min_makespan)+";"
 		ret += str(self.max_makespan)+";"
-		ret += str(self.median_njobs)+";"
-		ret += str(self.mean_njobs)+";"
-		ret += str(self.median_period)+";"
-		ret += str(self.mean_period)+";"
-		ret += str(self.median_input_njobs)+";"
-		ret += str(self.mean_input_njobs)+";"
+		ret += str(self.baseline_metrics.makespan)+";"
+		ret += str(self.mckp_metrics.makespan)+";"
+		ret += str(self.baseline_metrics.mean_bandwidth)+";"
+		ret += str(self.mckp_metrics.mean_bandwidth)+";"
+		ret += str(self.baseline_metrics.median_bandwidth)+";"
+		ret += str(self.mckp_metrics.median_bandwidth)+";"
+		ret += str(self.baseline_metrics.max_bandwidth)+";"
+		ret += str(self.mckp_metrics.max_bandwidth)+";"
+		ret += str(self.mckp_metrics.policy_calls)+";"
+		ret += str(self.mckp_metrics.changes)+";"
+		ret += str(self.mckp_metrics.median_period)+";"
+		ret += str(self.mckp_metrics.mean_period)+";"
+		ret += str(self.mckp_metrics.median_njobs)+";"
+		ret += str(self.mckp_metrics.mean_njobs)+";"
 #		ret += str()+";"
 		return ret+"\n"	
 
@@ -130,7 +140,7 @@ def make_a_queue(apps, node_nb, min_time, debug=False):
 		app = randint(0,len(apps)-1)
 		queue.append(apps[app])
 		if debug:
-			print("adding a job for application "+str(apps[app])+", now our optimistic execution time is "+str(calculate_makespan(queue, node_nb, "best", debug)))
+			print("adding a job for application "+str(apps[app])+", now our optimistic execution time is "+str(calculate_makespan(queue, node_nb, "best")))
 	return queue
 	
 #play the execution of the queue with FIFO scheduler on a cluster
