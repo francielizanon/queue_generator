@@ -4,8 +4,6 @@ In the current state, the decisions are on the number of I/O nodes to be used by
 
 Parameters are given directly into the generate_queues.py file, which upon execution will generate an output file with one queue and its metrics per line. The queue is encoded with one letter per job. For details, see application_encode.py
 
-In the while loop at the end of the generate_queues.py file, additional filters may be added to keep only queues that have some potential. 
-
 There is no guarantee the code will always stop and find a solution, specially as we pile up filters and increase the number of generated queues (we might reach a situation where there are not enough possible queues). However, that is highly unlikely.
 
 # How to add new applications
@@ -29,4 +27,4 @@ Sometimes (it is quite rare), because of floating number precision issues, the e
 # TO DO
 
 - Bandwidth in bandwidth.py
-- confirm line 59 of policy.py (in the MCKP implementation is not an error)
+- confirm line 59 of policy.py (in the MCKP implementation) is not an error
