@@ -23,8 +23,3 @@ There is no guarantee the code will always stop and find a solution, specially a
 # Known issues
 
 Sometimes (it is quite rare), because of floating number precision issues, the end time of a job during the simulation will decrease after updating the clock and re-calculating it. The problem with that is that when we have multiple jobs with end times that are very close, we may have clock updates that do not change its value, and then the policy will be called twice for the same clock. That will artificially decrease the median_period and mean_period metrics and increase policy_calls. Still, it is quite rare (like once every 1000 queues), and these metrics are estimations anyway. Still, when that happens the code prints a "PANIC" message to the terminal, so repeating it a few times should be enough to get a set of queues without this occurrence. 
-
-# TO DO
-
-- Bandwidth in bandwidth.py
-- confirm line 59 of policy.py (in the MCKP implementation) is not an error

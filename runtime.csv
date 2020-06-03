@@ -1,0 +1,231 @@
+forwarders;clients;processes;application;label;runtime;configuration
+1;32;64;MADBENCH2;experiment-madbench-32-64-0;427.6; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+4;32;64;MADBENCH2;experiment-madbench-32-64-10;108.01; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+8;32;64;MADBENCH2;experiment-madbench-32-64-11;108.84; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+1;32;64;MADBENCH2;experiment-madbench-32-64-12;417.08; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+2;32;64;MADBENCH2;experiment-madbench-32-64-13;353.75; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+4;32;64;MADBENCH2;experiment-madbench-32-64-14;107.92; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+8;32;64;MADBENCH2;experiment-madbench-32-64-15;109.91; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+1;32;64;MADBENCH2;experiment-madbench-32-64-16;419.56; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+2;32;64;MADBENCH2;experiment-madbench-32-64-17;358.39; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+4;32;64;MADBENCH2;experiment-madbench-32-64-18;107.99; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+8;32;64;MADBENCH2;experiment-madbench-32-64-19;108.69; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+2;32;64;MADBENCH2;experiment-madbench-32-64-1;355.07; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+4;32;64;MADBENCH2;experiment-madbench-32-64-2;107.23; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+8;32;64;MADBENCH2;experiment-madbench-32-64-3;107.47; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+1;32;64;MADBENCH2;experiment-madbench-32-64-4;418.17; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+2;32;64;MADBENCH2;experiment-madbench-32-64-5;359.02; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+4;32;64;MADBENCH2;experiment-madbench-32-64-6;108.26; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+8;32;64;MADBENCH2;experiment-madbench-32-64-7;109.85; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+1;32;64;MADBENCH2;experiment-madbench-32-64-8;421.02; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+2;32;64;MADBENCH2;experiment-madbench-32-64-9;353.98; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+0;32;64;MADBENCH2;experiment-madbench-32-64-lustre-0;125.91; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+0;32;64;MADBENCH2;experiment-madbench-32-64-lustre-1;128.51; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+0;32;64;MADBENCH2;experiment-madbench-32-64-lustre-2;130.75; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+0;32;64;MADBENCH2;experiment-madbench-32-64-lustre-3;131.48; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+0;32;64;MADBENCH2;experiment-madbench-32-64-lustre-4;123.83; no_pe = 64  no_pix = 4096  no_bin = 64  no_gang = 1  sblocksize = 8  fblocksize = 8  r_mod = 4  w_mod = 4 IOMETHOD = POSIX  IOMODE = SYNC  FILETYPE = UNIQUE  REMAP = CUSTOM
+1;16;16;S3ASIM;experiment-s3asim-16-16-0;213.763;
+4;16;16;S3ASIM;experiment-s3asim-16-16-10;134.096;
+8;16;16;S3ASIM;experiment-s3asim-16-16-11;134.902;
+1;16;16;S3ASIM;experiment-s3asim-16-16-12;204.085;
+2;16;16;S3ASIM;experiment-s3asim-16-16-13;193.23;
+4;16;16;S3ASIM;experiment-s3asim-16-16-14;135.385;
+8;16;16;S3ASIM;experiment-s3asim-16-16-15;133.289;
+1;16;16;S3ASIM;experiment-s3asim-16-16-16;207.03;
+2;16;16;S3ASIM;experiment-s3asim-16-16-17;213.591;
+4;16;16;S3ASIM;experiment-s3asim-16-16-18;133.841;
+8;16;16;S3ASIM;experiment-s3asim-16-16-19;129.165;
+2;16;16;S3ASIM;experiment-s3asim-16-16-1;214.144;
+4;16;16;S3ASIM;experiment-s3asim-16-16-2;134.431;
+8;16;16;S3ASIM;experiment-s3asim-16-16-3;131.761;
+1;16;16;S3ASIM;experiment-s3asim-16-16-4;203.182;
+2;16;16;S3ASIM;experiment-s3asim-16-16-5;197.514;
+4;16;16;S3ASIM;experiment-s3asim-16-16-6;137.471;
+8;16;16;S3ASIM;experiment-s3asim-16-16-7;133.953;
+1;16;16;S3ASIM;experiment-s3asim-16-16-8;199.218;
+2;16;16;S3ASIM;experiment-s3asim-16-16-9;226.804;
+0;16;16;S3ASIM;experiment-s3asim-16-16-lustre-0;140.152;
+0;16;16;S3ASIM;experiment-s3asim-16-16-lustre-1;134.71;
+0;16;16;S3ASIM;experiment-s3asim-16-16-lustre-2;136.898;
+0;16;16;S3ASIM;experiment-s3asim-16-16-lustre-3;133.651;
+0;16;16;S3ASIM;experiment-s3asim-16-16-lustre-4;133.976;
+1;32;128;BTIO;experiment-btio-32-128-C-full-0;133.18; C
+4;32;128;BTIO;experiment-btio-32-128-C-full-10;44.04; C
+8;32;128;BTIO;experiment-btio-32-128-C-full-11;46.13; C
+1;32;128;BTIO;experiment-btio-32-128-C-full-12;140.64; C
+2;32;128;BTIO;experiment-btio-32-128-C-full-13;130.73; C
+4;32;128;BTIO;experiment-btio-32-128-C-full-14;44.02; C
+8;32;128;BTIO;experiment-btio-32-128-C-full-15;46.68; C
+1;32;128;BTIO;experiment-btio-32-128-C-full-16;130.87; C
+2;32;128;BTIO;experiment-btio-32-128-C-full-17;130.9; C
+4;32;128;BTIO;experiment-btio-32-128-C-full-18;46.6; C
+8;32;128;BTIO;experiment-btio-32-128-C-full-19;46.41; C
+2;32;128;BTIO;experiment-btio-32-128-C-full-1;143.01; C
+4;32;128;BTIO;experiment-btio-32-128-C-full-2;46.1; C
+8;32;128;BTIO;experiment-btio-32-128-C-full-3;46.87; C
+1;32;128;BTIO;experiment-btio-32-128-C-full-4;129.52; C
+2;32;128;BTIO;experiment-btio-32-128-C-full-5;130.58; C
+4;32;128;BTIO;experiment-btio-32-128-C-full-6;45.7; C
+8;32;128;BTIO;experiment-btio-32-128-C-full-7;46.85; C
+1;32;128;BTIO;experiment-btio-32-128-C-full-8;127.72; C
+2;32;128;BTIO;experiment-btio-32-128-C-full-9;147.06; C
+0;32;128;BTIO;experiment-btio-32-128-C-full-lustre-0;44.28; C
+0;32;128;BTIO;experiment-btio-32-128-C-full-lustre-1;44.46; C
+0;32;128;BTIO;experiment-btio-32-128-C-full-lustre-2;43.5; C
+0;32;128;BTIO;experiment-btio-32-128-C-full-lustre-3;43.75; C
+0;32;128;BTIO;experiment-btio-32-128-C-full-lustre-4;44.58; C
+1;64;512;BTIO;experiment-btio-64-512-D-full-0;2405.8; D
+4;64;512;BTIO;experiment-btio-64-512-D-full-10;1064.03; D
+8;64;512;BTIO;experiment-btio-64-512-D-full-11;938.62; D
+1;64;512;BTIO;experiment-btio-64-512-D-full-12;2359.83; D
+2;64;512;BTIO;experiment-btio-64-512-D-full-13;2785.49; D
+4;64;512;BTIO;experiment-btio-64-512-D-full-14;1059.73; D
+8;64;512;BTIO;experiment-btio-64-512-D-full-15;1063.54; D
+1;64;512;BTIO;experiment-btio-64-512-D-full-16;3048.44; D
+2;64;512;BTIO;experiment-btio-64-512-D-full-17;2488.64; D
+4;64;512;BTIO;experiment-btio-64-512-D-full-18;1005.87; D
+8;64;512;BTIO;experiment-btio-64-512-D-full-19;925.53; D
+2;64;512;BTIO;experiment-btio-64-512-D-full-1;2770.86; D
+4;64;512;BTIO;experiment-btio-64-512-D-full-2;1062.27; D
+8;64;512;BTIO;experiment-btio-64-512-D-full-3;939.53; D
+1;64;512;BTIO;experiment-btio-64-512-D-full-4;2437.68; D
+2;64;512;BTIO;experiment-btio-64-512-D-full-5;2764.29; D
+4;64;512;BTIO;experiment-btio-64-512-D-full-6;1063.69; D
+8;64;512;BTIO;experiment-btio-64-512-D-full-7;929.8; D
+1;64;512;BTIO;experiment-btio-64-512-D-full-8;2460.28; D
+2;64;512;BTIO;experiment-btio-64-512-D-full-9;2770.95; D
+0;64;512;BTIO;experiment-btio-64-512-D-full-lustre-0;617.46; D
+0;64;512;BTIO;experiment-btio-64-512-D-full-lustre-1;643.16; D
+0;64;512;BTIO;experiment-btio-64-512-D-full-lustre-2;677.24; D
+0;64;512;BTIO;experiment-btio-64-512-D-full-lustre-3;719.15; D
+0;64;512;BTIO;experiment-btio-64-512-D-full-lustre-4;766.16; D
+1;16;128;IOR-POSIX;experiment-ior-16-128-0;113.71; -a POSIX -b 128m -t 2m -B -w -r
+4;16;128;IOR-POSIX;experiment-ior-16-128-10;14.96; -a POSIX -b 128m -t 2m -B -w -r
+8;16;128;IOR-POSIX;experiment-ior-16-128-11;6.011939; -a POSIX -b 128m -t 2m -B -w -r
+1;16;128;IOR-POSIX;experiment-ior-16-128-12;112.47; -a POSIX -b 128m -t 2m -B -w -r
+2;16;128;IOR-POSIX;experiment-ior-16-128-13;82.92; -a POSIX -b 128m -t 2m -B -w -r
+4;16;128;IOR-POSIX;experiment-ior-16-128-14;14.66; -a POSIX -b 128m -t 2m -B -w -r
+8;16;128;IOR-POSIX;experiment-ior-16-128-15;5.969414; -a POSIX -b 128m -t 2m -B -w -r
+1;16;128;IOR-POSIX;experiment-ior-16-128-16;112.44; -a POSIX -b 128m -t 2m -B -w -r
+2;16;128;IOR-POSIX;experiment-ior-16-128-17;83.63; -a POSIX -b 128m -t 2m -B -w -r
+4;16;128;IOR-POSIX;experiment-ior-16-128-18;14.72; -a POSIX -b 128m -t 2m -B -w -r
+8;16;128;IOR-POSIX;experiment-ior-16-128-19;6.461136; -a POSIX -b 128m -t 2m -B -w -r
+2;16;128;IOR-POSIX;experiment-ior-16-128-1;79.28; -a POSIX -b 128m -t 2m -B -w -r
+4;16;128;IOR-POSIX;experiment-ior-16-128-2;14.68; -a POSIX -b 128m -t 2m -B -w -r
+8;16;128;IOR-POSIX;experiment-ior-16-128-3;5.367248; -a POSIX -b 128m -t 2m -B -w -r
+1;16;128;IOR-POSIX;experiment-ior-16-128-4;114.04; -a POSIX -b 128m -t 2m -B -w -r
+2;16;128;IOR-POSIX;experiment-ior-16-128-5;82.48; -a POSIX -b 128m -t 2m -B -w -r
+4;16;128;IOR-POSIX;experiment-ior-16-128-6;14.62; -a POSIX -b 128m -t 2m -B -w -r
+8;16;128;IOR-POSIX;experiment-ior-16-128-7;5.455968; -a POSIX -b 128m -t 2m -B -w -r
+1;16;128;IOR-POSIX;experiment-ior-16-128-8;114.21; -a POSIX -b 128m -t 2m -B -w -r
+2;16;128;IOR-POSIX;experiment-ior-16-128-9;81.38; -a POSIX -b 128m -t 2m -B -w -r
+0;16;128;IOR-POSIX;experiment-ior-16-128-lustre-0;172.55; -a POSIX -b 128m -t 2m -B -w -r
+0;16;128;IOR-POSIX;experiment-ior-16-128-lustre-1;114.27; -a POSIX -b 128m -t 2m -B -w -r
+0;16;128;IOR-POSIX;experiment-ior-16-128-lustre-2;128.85; -a POSIX -b 128m -t 2m -B -w -r
+0;16;128;IOR-POSIX;experiment-ior-16-128-lustre-3;124.23; -a POSIX -b 128m -t 2m -B -w -r
+0;16;128;IOR-POSIX;experiment-ior-16-128-lustre-4;121.42; -a POSIX -b 128m -t 2m -B -w -r
+1;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-0;123; -a MPIIO -b 128m -t 2m -B -w -r
+4;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-10;14.85; -a MPIIO -b 128m -t 2m -B -w -r
+8;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-11;6.717903; -a MPIIO -b 128m -t 2m -B -w -r
+1;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-12;121.89; -a MPIIO -b 128m -t 2m -B -w -r
+2;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-13;87.92; -a MPIIO -b 128m -t 2m -B -w -r
+4;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-14;15.8; -a MPIIO -b 128m -t 2m -B -w -r
+8;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-15;5.822276; -a MPIIO -b 128m -t 2m -B -w -r
+1;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-16;121.52; -a MPIIO -b 128m -t 2m -B -w -r
+2;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-17;91.82; -a MPIIO -b 128m -t 2m -B -w -r
+4;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-18;15.13; -a MPIIO -b 128m -t 2m -B -w -r
+8;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-19;6.709392; -a MPIIO -b 128m -t 2m -B -w -r
+2;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-1;89.8; -a MPIIO -b 128m -t 2m -B -w -r
+4;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-2;15.87; -a MPIIO -b 128m -t 2m -B -w -r
+8;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-3;6.667196; -a MPIIO -b 128m -t 2m -B -w -r
+1;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-4;121.53; -a MPIIO -b 128m -t 2m -B -w -r
+2;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-5;88.57; -a MPIIO -b 128m -t 2m -B -w -r
+4;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-6;14.74; -a MPIIO -b 128m -t 2m -B -w -r
+8;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-7;6.368526; -a MPIIO -b 128m -t 2m -B -w -r
+1;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-8;122.47; -a MPIIO -b 128m -t 2m -B -w -r
+2;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-9;92.76; -a MPIIO -b 128m -t 2m -B -w -r
+0;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-lustre-repeat-0;47.841359; -a MPIIO -b 128m -t 2m -B -w -r
+0;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-lustre-repeat-1;30.468818; -a MPIIO -b 128m -t 2m -B -w -r
+0;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-lustre-repeat-2;31.68; -a MPIIO -b 128m -t 2m -B -w -r
+0;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-lustre-repeat-3;30.52; -a MPIIO -b 128m -t 2m -B -w -r
+0;16;128;IOR-MPIIO;experiment-ior-16-128-mpiio-lustre-repeat-4;25.944398; -a MPIIO -b 128m -t 2m -B -w -r
+1;64;512;IOR-POSIX;experiment-ior-64-512-0;229.94; -a POSIX -b 64m -F -t 4m -B -w -r
+4;64;512;IOR-POSIX;experiment-ior-64-512-10;86.6; -a POSIX -b 64m -F -t 4m -B -w -r
+8;64;512;IOR-POSIX;experiment-ior-64-512-11;24.27; -a POSIX -b 64m -F -t 4m -B -w -r
+1;64;512;IOR-POSIX;experiment-ior-64-512-12;231.21; -a POSIX -b 64m -F -t 4m -B -w -r
+2;64;512;IOR-POSIX;experiment-ior-64-512-13;159.66; -a POSIX -b 64m -F -t 4m -B -w -r
+4;64;512;IOR-POSIX;experiment-ior-64-512-14;87.95; -a POSIX -b 64m -F -t 4m -B -w -r
+8;64;512;IOR-POSIX;experiment-ior-64-512-15;24.42; -a POSIX -b 64m -F -t 4m -B -w -r
+1;64;512;IOR-POSIX;experiment-ior-64-512-16;230.23; -a POSIX -b 64m -F -t 4m -B -w -r
+2;64;512;IOR-POSIX;experiment-ior-64-512-17;162.08; -a POSIX -b 64m -F -t 4m -B -w -r
+4;64;512;IOR-POSIX;experiment-ior-64-512-18;86.82; -a POSIX -b 64m -F -t 4m -B -w -r
+8;64;512;IOR-POSIX;experiment-ior-64-512-19;25.29; -a POSIX -b 64m -F -t 4m -B -w -r
+2;64;512;IOR-POSIX;experiment-ior-64-512-1;158.52; -a POSIX -b 64m -F -t 4m -B -w -r
+4;64;512;IOR-POSIX;experiment-ior-64-512-2;87.88; -a POSIX -b 64m -F -t 4m -B -w -r
+8;64;512;IOR-POSIX;experiment-ior-64-512-3;24.41; -a POSIX -b 64m -F -t 4m -B -w -r
+1;64;512;IOR-POSIX;experiment-ior-64-512-4;230.06; -a POSIX -b 64m -F -t 4m -B -w -r
+2;64;512;IOR-POSIX;experiment-ior-64-512-5;158.6; -a POSIX -b 64m -F -t 4m -B -w -r
+4;64;512;IOR-POSIX;experiment-ior-64-512-6;87.35; -a POSIX -b 64m -F -t 4m -B -w -r
+8;64;512;IOR-POSIX;experiment-ior-64-512-7;25.72; -a POSIX -b 64m -F -t 4m -B -w -r
+1;64;512;IOR-POSIX;experiment-ior-64-512-8;227.35; -a POSIX -b 64m -F -t 4m -B -w -r
+2;64;512;IOR-POSIX;experiment-ior-64-512-9;156.61; -a POSIX -b 64m -F -t 4m -B -w -r
+0;64;512;IOR-POSIX;experiment-ior-64-512-lustre-0;210.36; -a POSIX -b 64m -F -t 4m -B -w -r
+0;64;512;IOR-POSIX;experiment-ior-64-512-lustre-1;221.35; -a POSIX -b 64m -F -t 4m -B -w -r
+0;64;512;IOR-POSIX;experiment-ior-64-512-lustre-2;232.12; -a POSIX -b 64m -F -t 4m -B -w -r
+0;64;512;IOR-POSIX;experiment-ior-64-512-lustre-3;245.7; -a POSIX -b 64m -F -t 4m -B -w -r
+0;64;512;IOR-POSIX;experiment-ior-64-512-lustre-4;260.22; -a POSIX -b 64m -F -t 4m -B -w -r
+1;64;512;S3D-IO;experiment-s3dio-64-512-0;675.75; 384 x    384 x    384
+4;64;512;S3D-IO;experiment-s3dio-64-512-10;229.12; 384 x    384 x    384
+8;64;512;S3D-IO;experiment-s3dio-64-512-11;228.98; 384 x    384 x    384
+1;64;512;S3D-IO;experiment-s3dio-64-512-12;650.37; 384 x    384 x    384
+2;64;512;S3D-IO;experiment-s3dio-64-512-13;746.22; 384 x    384 x    384
+4;64;512;S3D-IO;experiment-s3dio-64-512-14;228.62; 384 x    384 x    384
+8;64;512;S3D-IO;experiment-s3dio-64-512-15;226.48; 384 x    384 x    384
+1;64;512;S3D-IO;experiment-s3dio-64-512-16;681.77; 384 x    384 x    384
+2;64;512;S3D-IO;experiment-s3dio-64-512-17;749.82; 384 x    384 x    384
+4;64;512;S3D-IO;experiment-s3dio-64-512-18;227.82; 384 x    384 x    384
+8;64;512;S3D-IO;experiment-s3dio-64-512-19;229.45; 384 x    384 x    384
+2;64;512;S3D-IO;experiment-s3dio-64-512-1;680.6; 384 x    384 x    384
+4;64;512;S3D-IO;experiment-s3dio-64-512-2;225.75; 384 x    384 x    384
+8;64;512;S3D-IO;experiment-s3dio-64-512-3;229.24; 384 x    384 x    384
+1;64;512;S3D-IO;experiment-s3dio-64-512-4;674.52; 384 x    384 x    384
+2;64;512;S3D-IO;experiment-s3dio-64-512-5;700.57; 384 x    384 x    384
+4;64;512;S3D-IO;experiment-s3dio-64-512-6;226.9; 384 x    384 x    384
+8;64;512;S3D-IO;experiment-s3dio-64-512-7;228.51; 384 x    384 x    384
+1;64;512;S3D-IO;experiment-s3dio-64-512-8;656.42; 384 x    384 x    384
+2;64;512;S3D-IO;experiment-s3dio-64-512-9;714.69; 384 x    384 x    384
+0;64;512;S3D-IO;experiment-s3dio-64-512-lustre-0;139.61; 384 x    384 x    384
+0;64;512;S3D-IO;experiment-s3dio-64-512-lustre-1;144.23; 384 x    384 x    384
+0;64;512;S3D-IO;experiment-s3dio-64-512-lustre-2;144.97; 384 x    384 x    384
+0;64;512;S3D-IO;experiment-s3dio-64-512-lustre-3;143.31; 384 x    384 x    384
+0;64;512;S3D-IO;experiment-s3dio-64-512-lustre-4;144.1; 384 x    384 x    384
+1;8;64;HACC;experiment-hacc-8-64-0;100.005;
+4;8;64;HACC;experiment-hacc-8-64-10;4.08487;
+8;8;64;HACC;experiment-hacc-8-64-11;2.93324;
+1;8;64;HACC;experiment-hacc-8-64-12;91.1319;
+2;8;64;HACC;experiment-hacc-8-64-13;53.928;
+4;8;64;HACC;experiment-hacc-8-64-14;3.63972;
+8;8;64;HACC;experiment-hacc-8-64-15;3.12342;
+1;8;64;HACC;experiment-hacc-8-64-16;84.3967;
+2;8;64;HACC;experiment-hacc-8-64-17;48.654;
+4;8;64;HACC;experiment-hacc-8-64-18;3.39794;
+8;8;64;HACC;experiment-hacc-8-64-19;2.49594;
+2;8;64;HACC;experiment-hacc-8-64-1;57.0846;
+4;8;64;HACC;experiment-hacc-8-64-2;4.04703;
+8;8;64;HACC;experiment-hacc-8-64-3;2.92517;
+1;8;64;HACC;experiment-hacc-8-64-4;90.1002;
+2;8;64;HACC;experiment-hacc-8-64-5;55.6494;
+4;8;64;HACC;experiment-hacc-8-64-6;4.38463;
+8;8;64;HACC;experiment-hacc-8-64-7;2.96132;
+1;8;64;HACC;experiment-hacc-8-64-8;91.8965;
+2;8;64;HACC;experiment-hacc-8-64-9;54.6962;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-0;54.7863;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-1;62.0738;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-2;56.967;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-3;58.2428;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-4;61.1501;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-5;58.9982;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-6;61.441;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-7;63.9751;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-8;60.5973;
+0;8;64;HACC;experiment-hacc-8-64-lustre-complement-9;61.4927;
